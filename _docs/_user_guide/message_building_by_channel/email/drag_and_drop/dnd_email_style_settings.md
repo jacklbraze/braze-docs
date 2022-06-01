@@ -29,7 +29,12 @@ In the **Basic Styling** dropdown, you can set your default email and content ba
 ![Basic styling options that include options to edit the email and content background colors, default font name, and default link color.][2]
 
 ### Add a custom font
-To add a custom font, click **Add a custom font** and enter the font's name and source file URL. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
+In order to add a custom font to Braze, you must perform the following steps:
+
+1. Create a @font-face [CSS file][9] and host this file on a web server that has CORS enabled
+2. Host the custom font file on a server with CORS enabled
+
+To add a custom font to Braze, click **Add a custom font** and enter the font's name and CSS file URL. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
 
 Currently, you can only add one custom font for the global style settings. 
 
@@ -80,3 +85,4 @@ After editing the styles in the Drag & Drop Email editor, click **Save**. To fur
 [6]: {% image_buster /assets/img_archive/dnd_heading_styling.png %}
 [7]: {% image_buster /assets/img_archive/dnd_default_override.png %}
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks
+[9]: https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp
